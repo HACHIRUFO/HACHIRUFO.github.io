@@ -143,21 +143,22 @@
             </tr>
         </table>
         <script type="text/javascript">
-            function sin(){
-                document.calculator.result.value=Math.sin(document.calculator.result.
-                value);
-            }
-            function cos(){
-                document.calculator.result.value=Math.cos(document.calculator.result.
-                value);
-            }
-            function tan(){
-                document.calculator.result.value=Math.tan(document.calculator.result.
-                value);
-            }
-            function sin(){
-                document.calculator.result.value=Math.sin(document.calculator.result.
-                value);
+            function sin() {
+                var angle = parseFloat(document.calculator.result.value);
+                var result = Math.sin((angle * Math.PI) / 180);
+                document.calculator.result.value = result;
+                }
+
+            function cos() {
+                var angle = parseFloat(document.calculator.result.value);
+                var result = Math.cos((angle * Math.PI) / 180);
+                document.calculator.result.value = result;
+                }
+
+            function tan() {
+                var angle = parseFloat(document.calculator.result.value);
+                var result = Math.tan((angle * Math.PI) / 180);
+                document.calculator.result.value = result;
             }
             function BACKSPC(){
                 var a = document.calculator.result.value;
